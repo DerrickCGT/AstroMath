@@ -87,7 +87,7 @@ namespace AstroMath
         public static double EventHorizon(double blackholeMass)
         {
 
-            double schwarzschildRadius = (2.0 * gravityConstant * blackholeMass) / (speedOfLight * speedOfLight);
+            double schwarzschildRadius = (2.0 * gravityConstant * blackholeMass) / Math.Pow(speedOfLight, 2);
 
             return schwarzschildRadius;
         }

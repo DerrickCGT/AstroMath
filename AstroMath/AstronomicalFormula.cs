@@ -25,7 +25,7 @@ namespace AstroMath
         /// This method calculates the star velocity using Doppler Shift.
         /// </summary>
         /// <param name="observedWavelength">Observed wavelength of the star.</param>
-        /// <param name="restWavelength">Rest wavelength of the star.</param>
+        /// <param name="restWavelength">Rest wavelength of the star.</param>k
         /// <returns>Calculated star velocity in meters per second.</returns>
         public static double StarVelocity(double observedWavelength, double restWavelength)
         {
@@ -39,7 +39,7 @@ namespace AstroMath
             {
                 return 0;
             }
-           
+
 
         }
 
@@ -58,7 +58,7 @@ namespace AstroMath
             {
                 return 0;
             }
-           
+
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace AstroMath
             {
                 return 0;
             }
-            
+
         }
 
         /// <summary>
@@ -86,13 +86,12 @@ namespace AstroMath
         /// <returns>Calculated event horizon (Schwarzschild radius) in meters.</returns>
         public static double EventHorizon(double blackholeMass)
         {
-           
+
             double schwarzschildRadius = (2.0 * gravityConstant * blackholeMass) / (speedOfLight * speedOfLight);
 
             return schwarzschildRadius;
         }
 
-
     }
-  
+
 }

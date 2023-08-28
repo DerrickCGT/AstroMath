@@ -29,18 +29,10 @@ namespace AstroMath
         /// <returns>Calculated star velocity in meters per second.</returns>
         public static double StarVelocity(double observedWavelength, double restWavelength)
         {
-            if (observedWavelength != 0)
-            {
-                double changeWavelength = observedWavelength - restWavelength;
-                double velocity = speedOfLight * (changeWavelength / restWavelength);
-                return Math.Round(velocity, 2);
-            }
-            else
-            {
-                return 0;
-            }
 
-
+            double changeWavelength = observedWavelength - restWavelength;
+            double velocity = speedOfLight * (changeWavelength / restWavelength);
+            return Math.Round(velocity, 2);
         }
 
         /// <summary>
@@ -50,15 +42,7 @@ namespace AstroMath
         /// <returns>Calculated star distance in parsecs (1 parsec = 3.0857E16 meters).</returns>
         public static double StarDistance(double arcSecondsAngle)
         {
-            if (arcSecondsAngle != 0)
-            {
-                return Math.Round(1 / arcSecondsAngle, 2);
-            }
-            else
-            {
-                return 0;
-            }
-
+             return Math.Round(1 / arcSecondsAngle, 2);
         }
 
         /// <summary>
@@ -68,15 +52,7 @@ namespace AstroMath
         /// <returns>Calculated temperature in degree Kelvin.</returns>
         public static double TemperatureInKelvin(double celcius)
         {
-            if (celcius >= 273)
-            {
-                return celcius + 273;
-            }
-            else
-            {
-                return 0;
-            }
-
+            return celcius + 273;
         }
 
         /// <summary>
@@ -86,9 +62,7 @@ namespace AstroMath
         /// <returns>Calculated event horizon (Schwarzschild radius) in meters.</returns>
         public static double EventHorizon(double blackholeMass)
         {
-
             double schwarzschildRadius = (2.0 * gravityConstant * blackholeMass) / Math.Pow(speedOfLight, 2);
-
             return schwarzschildRadius;
         }
 

@@ -18,8 +18,8 @@ namespace AstroMath
     public class AstronomicalFormula
     {
 
-        const double speedOfLight = 299792458.0;    // Gravitational constant in m^3 kg^-1 s^-2
-        const double gravityConstant = 6.674e-11;   // Speed of light in m/s
+        const double speedOfLight = 299792458.0;    // Speed of light in m/s
+        const double gravityConstant = 6.674e-11;   // Gravitational constant in m^3 kg^-1 s^-2
 
         /// <summary>
         /// This method calculates the star velocity using Doppler Shift.

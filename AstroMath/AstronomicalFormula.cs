@@ -48,11 +48,11 @@ namespace AstroMath
         /// </summary>
         /// <param name="arsecondsAngle">Parallax angle in archseconds.</param>
         /// <returns>Calculated star distance in parsecs (1 parsec = 3.0857E16 meters).</returns>
-        public static double StarDistance(double arsecondsAngle)
+        public static double StarDistance(double arcSecondsAngle)
         {
-            if (arsecondsAngle != 0)
+            if (arcSecondsAngle != 0)
             {
-                return Math.Round(1 / arsecondsAngle, 2);
+                return Math.Round(1 / arcSecondsAngle, 2);
             }
             else
             {

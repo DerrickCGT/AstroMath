@@ -27,7 +27,7 @@ namespace AstroMath
         /// <param name="observedWavelength">Observed wavelength of the star.</param>
         /// <param name="restWavelength">Rest wavelength of the star.</param>k
         /// <returns>Calculated star velocity in meters per second.</returns>
-        public static double StarVelocity(double observedWavelength, double restWavelength)
+        public double StarVelocity(double observedWavelength, double restWavelength)
         {
 
             double changeWavelength = observedWavelength - restWavelength;
@@ -40,7 +40,7 @@ namespace AstroMath
         /// </summary>
         /// <param name="arsecondsAngle">Parallax angle in archseconds.</param>
         /// <returns>Calculated star distance in parsecs (1 parsec = 3.0857E16 meters).</returns>
-        public static double StarDistance(double arcSecondsAngle)
+        public double StarDistance(double arcSecondsAngle)
         {
              return Math.Round(1 / arcSecondsAngle, 2);
         }
@@ -50,7 +50,7 @@ namespace AstroMath
         /// </summary>
         /// <param name="celcius">Temperature in Celsius.</param>
         /// <returns>Calculated temperature in degree Kelvin.</returns>
-        public static double TemperatureInKelvin(double celcius)
+        public double TemperatureInKelvin(double celcius)
         {
             return celcius + 273;
         }
@@ -60,7 +60,7 @@ namespace AstroMath
         /// </summary>
         /// <param name="blackholeMass">Mass of the black hole in kilograms.</param>
         /// <returns>Calculated event horizon (Schwarzschild radius) in meters.</returns>
-        public static double EventHorizon(double blackholeMass)
+        public double EventHorizon(double blackholeMass)
         {
             double schwarzschildRadius = (2.0 * gravityConstant * blackholeMass) / Math.Pow(speedOfLight, 2);
             return schwarzschildRadius;
